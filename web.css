@@ -1,0 +1,109 @@
+*{
+    box-sizing:border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+:root {
+    --black: #151515;
+    --white: white;
+    --light-grey: #7c7c7c;
+    --brand-blue: #5845ee;
+    --brand-blue-hover: #3323b4;
+    --border-color: #dfe5f4;
+    --background-grey: #f8fafb;
+    --2025--blue: #1a124a;
+    --grey: #566072;
+    --divider-color: #eaeff7;
+    --monster: #0b8560;
+    --10-blue: #4f7bea1a;
+    --not-so-green: #09969e;
+    --violet: #8e3cdd;
+    --pinky-swear: #cd619b;
+}
+
+.section-main-header{
+    background-color: var(--2025--blue);
+    color:var(--white);
+}
+
+.interact{
+    width:100%;
+    height:100%;
+    display:block;
+    flex-direction: row;
+    justify-content:space-between;
+    margin-bottom:72px;
+}
+.talkbase-logo{
+    width:20px;
+    height:20px;
+}
+.nav-item{
+    margin: 0 8px 65px;
+    display:inline-flex;
+    font-size:18px;
+}
+.nav-item:hover{
+    cursor:pointer;
+    background: rgba(0,0,0,0.25);
+}
+.list-interact{
+    display:inline;
+    margin: auto 16px;
+}
+.Login{
+    margin-left: 600px;
+}
+.General-Info{
+    display:inline-flex;
+    align-items: center;
+    border:1px solid #312670;
+    border-radius: 999px;
+    margin-left:40%;
+}
+.Hide-tablet{
+    display:inline-flex;
+    background:border-box;
+}
+.Read-more{
+    display:inline-flex;
+    margin-left:5px;
+    color: var(--brand-blue);
+}
+.General-Info:hover{
+    cursor:pointer;
+    background: rgba(0,0,0,0.25);
+}
+.Read-more:hover{
+    cursor:pointer;
+    background: rgba(255,255,255,0.75);
+}
+.Introduct{
+    text-align:center;
+}
+.header{
+    font-size:58px;
+    margin-left:170px;
+    margin-right:170px;
+}
+.sub-header{
+    font-size:18px;
+    margin-left:430px;
+    margin-right:430px;
+}
+.never{
+    background:linear-gradient(90deg,var(--2025--blue),var(--white)) text;   
+}
+.Get-started{
+    margin-left:48%;
+    line-height: 1.5;
+    font-size:14px;
+    background-color: var(--brand-blue);
+    color:var(--white);
+    border-radius: 8px;
+    padding:10px;
+}
+.Get-started:hover{
+    cursor:pointer;
+    background: rgba(0,0,0,0.25);
+}
