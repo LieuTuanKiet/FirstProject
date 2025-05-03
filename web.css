@@ -1,6 +1,7 @@
 *{
     box-sizing:border-box;
     font-family:Georgia, 'Times New Roman', Times, serif;
+    margin:0;
 }
 
 :root {
@@ -29,7 +30,7 @@
 .interact{
     width:100%;
     height:100%;
-    display:block;
+    display:flex;
     flex-direction: row;
     justify-content:space-between;
     margin-bottom:72px;
@@ -48,62 +49,90 @@
     background: rgba(0,0,0,0.25);
 }
 .list-interact{
-    display:inline;
-    margin: auto 16px;
+    margin: 2% 10% 0;
 }
-.Login{
-    margin-left: 600px;
-}
-.General-Info{
-    display:inline-flex;
-    align-items: center;
+.general-info{
+    display:flex;
+    justify-content: center;
     border:1px solid #312670;
     border-radius: 999px;
-    margin-left:40%;
+    width: fit-content;
+    margin: 0 auto;
+    transition: opacity ease-in 0.15s;
 }
-.Hide-tablet{
-    display:inline-flex;
-    background:border-box;
-}
-.Read-more{
-    display:inline-flex;
+.read-more{
     margin-left:5px;
     color: var(--brand-blue);
+    transition: opacity ease-in 0.15s;
 }
-.General-Info:hover{
+.general-info:hover{
     cursor:pointer;
-    background: rgba(0,0,0,0.25);
+    opacity: 0.5;
 }
-.Read-more:hover{
+.read-more:hover{
     cursor:pointer;
-    background: rgba(255,255,255,0.75);
+    opacity: 0.5;
 }
-.Introduct{
-    text-align:center;
+.introduct{
+    text-align: center;
 }
 .header{
-    font-size:58px;
-    margin-left:170px;
-    margin-right:170px;
+    font-size:3vw;
+    width:50%;
+    margin: 0 auto;
 }
 .sub-header{
-    font-size:18px;
-    margin-left:430px;
-    margin-right:430px;
+    font-size:1.2vw;
+    width:33%;
+    margin: 0 auto;
 }
 .never{
     background:linear-gradient(90deg,var(--2025--blue),var(--white)) text;   
 }
-.Get-started{
-    margin-left:48%;
-    line-height: 1.5;
-    font-size:14px;
+.get-started{
+    margin: 0 44%;
+    font-size: 100%;
     background-color: var(--brand-blue);
     color:var(--white);
     border-radius: 8px;
-    padding:10px;
+    border:none;
+    transition: opacity ease-in 0.15s;
 }
-.Get-started:hover{
+.get-started:hover{
     cursor:pointer;
-    background: rgba(0,0,0,0.25);
+    opacity:0.5;
+}
+.section-main-screen{
+    display:flex;
+    flex-direction: column;
+}
+.dashboard-image{
+    background: var(--2025--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.big-image{
+    width:50vw;
+    height:50vh;
+    margin:5% 25% 0%;
+}
+.small-dashboard-image{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+.small-image{
+    width:20vw;
+    height:30vh;
+    margin:-17vw 15%;
+}
+.section-main-logo{
+    margin:10% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.grey-text{
+    color: var(--grey)
 }
