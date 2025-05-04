@@ -427,6 +427,8 @@
 .talkbase-tag{
     display:flex;
     margin:0 0 45%;
+    font-size:1.2vw;
+    font-weight:600;
 }
 .alpca-logo{
     width:4vw;
