@@ -62,7 +62,7 @@
     border:1px solid #312670;
     border-radius: 999px;
     width: fit-content;
-    margin: 0 auto;
+    margin: 0 auto 2%;
     transition: opacity ease-in 0.15s;
 }
 .read-more{
@@ -84,18 +84,18 @@
 .header{
     font-size:3vw;
     width:50%;
-    margin: 0 auto;
+    margin: 0 auto 2%;
 }
 .sub-header{
     font-size:1.2vw;
     width:33%;
-    margin: 0 auto;
+    margin: 0 auto 2%;
 }
 .never{
     background:linear-gradient(90deg,var(--2025--blue),var(--white)) text;   
 }
 .get-started{
-    margin: 0 44%;
+    margin: 0 44% 3%;
     font-size: 1vw;
     padding:1%;
     background-color: var(--brand-blue);
@@ -121,7 +121,7 @@
 .big-image{
     width:50vw;
     height:50vh;
-    margin:5% 25% 0%;
+    margin:10% 25% 0%;
     border-radius: 1vw;
 }
 .small-dashboard-image{
@@ -225,6 +225,12 @@
     height:70%;
     margin:0 auto;
     position:relative;
+    top:30%
+}
+#sentiment-image{
+    position:relative;
+    right:5%;
+    top:20%;
 }
 .first-merge{
     display:flex;
@@ -351,4 +357,127 @@
 .clear-effect{
     color:var(--black);
     text-decoration: none;
+}
+.section-advise{
+    background-color: var(--2025--blue);
+    color:var(--white);
+    display:flex;
+    justify-content: space-around;
+    margin-top:7%;
+}
+.end-title{
+    margin:10% 13% 2%;
+    color:var(--grey);
+    font-size:1.1vw;
+}
+.end-slogan{
+    margin:0 13% 2%;
+    font-size:3vw;
+}
+.list-benefits{
+    display:flex;
+    margin:0 8% 2%;
+}
+.benefits-item{
+    display:inline-flex;
+    margin-right:2%;
+}
+.checkout-place{
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    margin:8%
+}
+.book-demo{
+    margin:0 auto;
+}
+#end-button{
+    position:relative;
+    right:35%;
+    padding:10%;
+    width:12vw;
+    font-size:1vw;
+}
+.adjust-effect-book-demo{
+    color:var(--white);
+    text-decoration: underline;
+}
+.section-footer{
+    background-color:var(--2025--blue);
+    color:var(--white);
+}
+.general{
+    display:flex;
+    justify-content: space-around;
+    width:75%;
+}
+.logo-and-image{
+    margin:0 13%;
+}
+.talkbase-image{
+    width:1.5vw;
+    height:1.5vw;
+}
+.talkbase-tag{
+    display:flex;
+    margin:0 0 45%;
+}
+.alpca-logo{
+    width:4vw;
+    height:4vw;
+}
+.list-item{
+    display:inline-flex;
+    justify-content: left;
+    margin:0 0 10%;
+}
+.name-link{
+    margin:0 30% 15%;
+    color:var(--light-grey);
+    font-size: 1vw;
+}
+.product{
+    display:flex;
+    flex-direction: column;
+}
+.resources{
+    display:flex;
+    flex-direction: column;
+}
+.help{
+    display:flex;
+    flex-direction: column;
+}
+.community{
+    display:flex;
+    flex-direction: column;
+}
+#help{
+    margin:0 24% 15%; 
+}
+.adjust-effect{
+    text-decoration: none;
+    color:var(--white);
+}
+.section-footnote{
+    display:flex;
+    justify-content: space-evenly;
+    background-color: var(--2025--blue);
+}
+.talkbase-version{
+    display:flex;
+    margin:5% 5% 10%;
+    flex-basis:60%
+}
+.version{
+    color:var(--light-grey);
+    width:20vw;
+    cursor:pointer;
+    transition: 0.2s;
+}
+.social-link{
+    margin:5% 5% 10%;
+}
+.version:hover{
+    color:var(--white);
 }
