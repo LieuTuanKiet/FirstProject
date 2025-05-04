@@ -61,12 +61,17 @@
     justify-content: center;
     border:1px solid #312670;
     border-radius: 999px;
-    width: fit-content;
+    width: 25vw;
+    height: 3vh;
     margin: 0 auto 2%;
     transition: opacity ease-in 0.15s;
+    background-color:var(--brand-blue-hover);
+}
+.hide-tablet{
+    display:inline-flex;
 }
 .read-more{
-    margin-left:5px;
+    display:inline-flex;
     color: var(--brand-blue);
     transition: opacity ease-in 0.15s;
 }
@@ -390,6 +395,7 @@
 }
 .book-demo{
     margin:0 auto;
+    cursor:pointer;
 }
 #end-button{
     position:relative;
