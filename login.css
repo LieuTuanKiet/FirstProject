@@ -52,6 +52,7 @@ input {
     margin-bottom: 15px;
     color: white;
     background-color: rgb(83, 101, 182);
+    border: 1px;
     border-radius: 5px;
     cursor: pointer;
 }
