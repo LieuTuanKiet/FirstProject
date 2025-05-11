@@ -1,0 +1,507 @@
+*{
+    box-sizing:border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin:0;
+}
+
+:root {
+    --black: #151515;
+    --white: white;
+    --light-grey: #7c7c7c;
+    --brand-blue: #5845ee;
+    --brand-blue-hover: #3323b4;
+    --border-color: #dfe5f4;
+    --background-grey: #f8fafb;
+    --2025--blue: #1a124a;
+    --grey: #566072;
+    --divider-color: #eaeff7;
+    --monster: #0b8560;
+    --10-blue: #4f7bea1a;
+    --not-so-green: #09969e;
+    --violet: #8e3cdd;
+    --pinky-swear: #cd619b;
+    --pale-blue:#e0e5fe;
+}
+
+
+
+.section-main-header{
+    background-color: var(--2025--blue);
+    color:var(--white);
+}
+
+.interact{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin-bottom:72px;
+}
+.talkbase-logo{
+    width:20px;
+    height:20px;
+}
+.nav-item{
+    margin: 0 8px 65px;
+    display:inline-flex;
+    font-size:1.2vw;
+}
+.nav-item:hover{
+    cursor:pointer;
+    color:var(--pale-blue);
+}
+.list-interact{
+    margin: 2% 10% 0;
+}
+.login{
+    color:var(--white);
+    text-decoration: none;
+}
+.login:hover{
+    color:var(--pale-blue);
+}
+.general-info{
+    display:flex;
+    justify-content: center;
+    border:1px solid #312670;
+    border-radius: 9999px;
+    padding:1%;
+    width: 35%;
+    height: 100%;
+    margin: 0 auto 2%;
+    transition: opacity ease-in 0.15s;
+    background-color:var(--brand-blue-hover);
+}
+.hide-tablet{
+    display:inline-flex;
+}
+.read-more{
+    display:inline-flex;
+    color: var(--brand-blue);
+    transition: opacity ease-in 0.15s;
+}
+.general-info:hover{
+    cursor:pointer;
+    opacity: 0.5;
+}
+.read-more:hover{
+    cursor:pointer;
+    opacity: 0.5;
+}
+.introduct{
+    text-align: center;
+}
+.header{
+    font-size:400%;
+    width:80%;
+    margin: 0 auto 2%;
+}
+.sub-header{
+    font-size:160%;
+    width:50%;
+    margin: 0 auto 2%;
+}
+.never{
+    background:linear-gradient(90deg,var(--2025--blue),var(--white)) text;
+    color: transparent;   
+}
+.get-started{
+    margin: 0 44% 3%;
+    font-size: 1vw;
+    padding:1%;
+    background-color: var(--brand-blue);
+    color:var(--white);
+    border-radius: 8px;
+    border:none;
+    transition: opacity ease-in 0.15s;
+}
+.get-started:hover{
+    cursor:pointer;
+    opacity:0.5;
+}
+.section-main-screen{
+    display:flex;
+    flex-direction: column;
+}
+.dashboard-image{
+    background: var(--2025--blue);
+    display: flex;
+    padding-bottom:30%;
+}
+.big-image{
+    width:80%;
+    height:80%;
+    margin:-25% 10% 0%;
+    border-radius: 1vw;
+}
+.small-image{
+    width:25%;
+    height:30%;
+    margin:-30% 5% 0;
+    border-radius: 1vw;
+}
+.section-main-logo{
+    margin:10% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.grey-text{
+    color: var(--grey);
+    font-size:1.25vw;
+    margin-bottom: 2%;
+}
+.section-main-addons{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom:-10%;
+}
+.addons-header{
+    background:linear-gradient(180deg,rgba(224,229,254,0.4),var(--white));
+}
+.highlight-paragraph{
+    color: var(--brand-blue);
+    border: 1px solid var(--brand-blue);
+    width:fit-content;
+    margin:5% auto 5%;
+    border-radius:1vw;
+}
+.heading-addon{
+    display:flex;
+    margin:0 auto 5%;
+    justify-content: center;
+    font-size: 2vw;
+}
+.slogan-addon{
+    display:flex;
+    margin:0 auto 5%;
+    justify-content: center;
+    font-size: 1.2vw;
+    width:68%;
+    text-align: center;
+}
+.addons-box{
+    padding:0 5%;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30vh 30vh 40vh;
+    grid-template-areas: 
+    "analytic sentiment"
+    "analytic engagement"
+    "crm crm";
+    column-gap: 1.5%;
+    row-gap: 3%;
+    margin-bottom:15%;
+}
+.analytic{
+    grid-area:analytic;
+    display:flex;
+    flex-direction: column;
+    border: 1px solid #f0f3f8;
+    border-radius: 1vw;
+    background-color:#f0f3f8;
+    outline-color:#f0f3f8;
+}
+.icon{
+    width:3vw;
+    height:3vw;
+    margin:2% auto 2%;
+}
+.merge-icon{
+    width:3vw;
+    height:3vw;
+    margin:5% 10% 10%;
+}
+.addons-heading{
+    margin:0 auto 2%;
+}
+.merge-addons-heading{
+    margin:0 10% 2%;
+}
+.addons-paragraph{
+    margin:0 auto 2%;
+    text-align: center;
+    width:70%;
+    color:var(--grey);
+}
+.merge-addons-paragraph{
+    margin:0 10%;
+    width:80%;
+    font-size:1.2vw;
+    color:var(--grey);
+}
+.big-image-addons{
+    width:35vw;
+    height:35vh;
+    margin:0 auto;
+}
+.small-image-addons{
+    width:70%;
+    height:70%;
+    margin:0 auto;
+    position:relative;
+    top:30%
+}
+#sentiment-image{
+    position:relative;
+    right:5%;
+    top:20%;
+}
+.sentiment{
+    grid-area: sentiment;
+    display:flex;
+    border: 1px solid #f2f2fe;
+    border-radius: 1vw;
+    background-color:#f2f2fe;
+    outline-color:#f2f2fe;
+}
+.engagement{
+    grid-area: engagement;
+    display:flex;
+    border: 1px solid #e3ecfe;
+    border-radius: 1vw;
+    background-color:#e3ecfe;
+    outline-color:#e3ecfe;
+}
+.crm{
+    grid-area: crm;
+    display:flex;
+    border: 1px solid #e3f1ed;
+    border-radius: 1vw;
+    background-color:#e3f1ed;
+    outline-color:#e3f1ed;
+}
+.link-header{
+    margin:5% 13% 2%;
+    font-size:2vw;
+}
+.link-paragraph{
+    margin:5% 13% 3%;
+    width:75%;
+    font-size:1.2vw;
+    color:var(--grey);
+}
+.logo-link{
+    display:flex;
+    flex-direction: row;
+    width: 70%;
+    margin:2% 10%;
+}
+.link-item{
+    display:inline-flex;
+    margin: 2% 1% 2%;
+}
+.image{
+    width:5vw;
+    padding:20%;
+    border: 1px solid var(--light-grey);
+    border-radius: 50%;
+    height:10vh;
+}
+.link-intergrations{
+    text-decoration: none;
+    color:var(--brand-blue);
+    width:70%;
+    margin:0 13%;
+    font-size:1.2vw;
+    font-weight:600;
+}
+.introduct-header{
+    margin:10% 13% 5%;
+    font-size:2vw;
+}
+.comment-box{
+    display:flex;
+    flex-direction: row;
+    width:70%;
+    margin:0 11.75%;
+    justify-content: space-around;
+}
+.user-comment-info{
+    display:flex;
+}
+.first-comment{
+    display:flex;
+    flex-direction: column;
+    border:1px solid var(--grey);
+    border-radius: 20px;
+    flex-basis:47%;
+}
+.comment-logo{
+    margin: 3% 5%;
+}
+.content-comment{
+    margin: 3% 5%;
+    font-size:1.35vw;
+    width:80%;
+}
+.name-and-position{
+    display:inline-flex;
+    flex-direction: column;
+}
+.avatar{
+    width:10%;
+    height:90%;
+    border-radius:50%;
+    margin:0 5%;
+}
+.second-comment{
+    display:flex;
+    flex-direction: column;
+    border:1px solid var(--grey);
+    border-radius: 20px;
+    flex-basis:47%;
+}
+#comment{
+    margin: 13% 5%;
+}
+.name-user{
+    font-weight:600;
+}
+.clear-effect{
+    color:var(--black);
+    text-decoration: none;
+}
+.section-advise{
+    background-color: var(--2025--blue);
+    color:var(--white);
+    display:flex;
+    justify-content: space-around;
+    margin-top:7%;
+}
+.end-title{
+    margin:10% 13% 2%;
+    color:var(--grey);
+    font-size:1.1vw;
+}
+.end-slogan{
+    margin:0 13% 2%;
+    font-size:250%;
+    width:200%;
+}
+.list-benefits{
+    display:flex;
+    width:100%;
+    margin:0 8% 2%;
+}
+.benefits-item{
+    display:inline;
+    margin-right:2%;
+    height:50%;
+    width:fit-content;
+    font-size:100%;
+}
+.checkout-place{
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    margin:8%;
+}
+.book-demo{
+    margin:0 auto;
+    cursor:pointer;
+}
+#end-button{
+    position:relative;
+    right:35%;
+    padding:10%;
+    width:12vw;
+    font-size:1vw;
+}
+.adjust-effect-book-demo{
+    color:var(--white);
+    text-decoration: underline;
+}
+.section-footer{
+    background-color:var(--2025--blue);
+    color:var(--white);
+}
+.general{
+    display:flex;
+    justify-content: left;
+    width:100;
+    margin:0 auto;
+}
+.logo-and-image{
+    margin-left:11%;
+    width:fit-content;
+}
+.talkbase-image{
+    width:1.5vw;
+    height:1.5vw;
+}
+.talkbase-tag{
+    display:flex;
+    margin:0 0 45%;
+    font-size:1.2vw;
+    font-weight:600;
+}
+.alpca-logo{
+    width:4vw;
+    height:4vw;
+}
+.footer-link{
+    display:flex;
+    justify-content: space-around;
+    width:68%;
+}
+.list-item{
+    display:inline-flex;
+    justify-content: left;
+    margin:0 0 10%;
+}
+.name-link{
+    margin:0 30% 15%;
+    color:var(--light-grey);
+    font-size: 1vw;
+}
+.product{
+    display:flex;
+    flex-direction: column;
+}
+.resources{
+    display:flex;
+    flex-direction: column;
+}
+.help{
+    display:flex;
+    flex-direction: column;
+}
+.community{
+    display:flex;
+    flex-direction: column;
+}
+#help{
+    margin:0 24% 15%; 
+}
+.adjust-effect{
+    text-decoration: none;
+    color:var(--white);
+}
+.adjust-effect:hover{
+    color:(var(--pale-blue));
+}
+.section-footnote{
+    display:flex;
+    justify-content: space-evenly;
+    background-color: var(--2025--blue);
+}
+.talkbase-version{
+    display:flex;
+    margin:5% 5% 10%;
+    flex-basis:60%
+}
+.version{
+    color:var(--light-grey);
+    width:20vw;
+    cursor:pointer;
+    transition: 0.2s;
+}
+.social-link{
+    margin:5% 5% 10%;
+}
+.version:hover{
+    color:var(--white);
+}

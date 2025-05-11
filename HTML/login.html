@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Simplify Digital Community Management | Talkbase.io</title>
+        <link rel="stylesheet" href="login.css">
+    </head>
+    <body>
+        <div class="login">
+            <h2><img src="https://cdn.prod.website-files.com/654cb95995bd6b25bb76b0dd/654cba2b5549a45807484ecd_631a250422f4281a761b4c27_talkbase.png" class="talkbase-logo">talkbase</h2>
+
+            <p id="error"></p>
+
+            <label for="email">Email address<br></label>
+            <input type="text" id="email" placeholder="your@email.address" required>
+            
+            <label for="password">Password<br></label>
+            <input type="password" id="password" placeholder="Your secret password" onkeydown="isEnter(event)" required>
+            
+            <button id="sign_in_dashboard" onclick="checkLogin()">Login to dashboard</button>
+
+            <button class="sign_in">Sign in with Google</button>
+
+            <button class="sign_in">Sign in with Microsoft</button>
+            
+            <button id="sign_in_SSO">Sign in with SSO</button>
+
+            <div class="div_1">
+                Did you forget your password?
+                <a href="#">Reset it now.</a>
+            
+                <p>Don't have an account yet?</p>
+
+                <button>Create a new one</button>
+            </div>
+        </div>
+    </body>
+    <script>
+        var account = JSON.parse(localStorage.getItem('account')) || {
+            'nguyenvietnghia24092006@gmail.com': 'password123',
+            'account@gmail.com': 'password123'
+        }
+
+        function isEnter(event) {
+            if (event.key === 'Enter') {
+                checkLogin()
+            }
+        }
+
+        function checkLogin() {
+            const email = document.querySelector('#email').value.trim()
+            const password = document.querySelector('#password').value
+
+            const error = document.querySelector('#error')
+
+            if (account[email] === password) {
+                error.innerHTML = ''
+                alert('Đăng nhập thành công!');
+
+            } else {
+                error.style.display = 'block'
+                error.innerHTML = 'Unknown error'
+            }
+        };
+    </script>
+</html>
