@@ -1,77 +1,184 @@
-body {
-    width: 100vm;
-    height: 100vh;
-    background-color: rgb(245, 249, 250);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Georgia, 'Times New Roman', Times, serif;
+    color: rgb(72, 69, 69);
 }
 
-.login {
-    width: 20em;
-    height: 30rem;
+:root {
+    --backgrount-color-html: rgba(240, 244, 244, 0.68);
+    --background-color-button-input: rgb(250, 250, 250);
+    --color-button-input: rgb(206, 228, 234);
+    --background-color-check-account: rgb(41, 71, 206);
+    --border-color-SSO: rgb(209, 208, 208);
+    --background-color-error: rgb(238, 194, 194);
+    --color-error: rgb(239, 22, 22);
 }
-
-.taskbase {
-    width: 20vw;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.talkbase-logo {
-    width: 30px;
-    height: 30px;
     
-    
-}
-
-#error {
-    display: none;
+html {
+    background-color: var(--backgrount-color-html);
     width: 100%;
-    padding: 10px;
-    color: rgb(239, 22, 22);
-    background-color: rgb(242, 188, 188); 
-    border-radius: 5px;
+    height: 100%;
 }
+
+.marginRL {
+    margin: 20px 0px 20px 0px;
+}
+
+div {
+    margin: 20px;
+}
+
+.logo {
+    width: 143.148px;
+    height: 31.991px;
+    margin-bottom: 20px;
+}
+
+.display_a {
+    display: block;
+}
+
+.display_b {
+    display: none;
+}
+
+.display_c {
+    display: none;
+}
+
+.div_first {
+    margin: 0px;
+    height: 96px;
+}
+
+.div_second {
+    width: 464px;
+    padding: 12px;
+    margin: 0px calc(50% - 232px) 0px calc(50% - 232px);
+}
+
+.div_end {
+    margin: 0;
+    height: 96px;
+}
+
+label {
+    padding-bottom: 5px;
+}
+
 
 input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #e2d6d6;
+    height: 40px;
+    display: block;
+    background-color: var(--background-color-button-input);
+    border: 1px solid var(--color-button-input);
     border-radius: 5px;
 }
 
-#sign_in_dashboard{
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    color: white;
-    background-color: rgb(83, 101, 182);
-    border: 1px;
-    border-radius: 5px;
+.input-with-icon-email {
+    background-image: url('https://png.pngtree.com/png-vector/20190508/ourmid/pngtree-email-vector-icon-png-image_1027071.jpg');
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-size: 14px 16px;
+    padding-left: 40px;
+}
+
+.input-with-icon-password {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/3064/3064197.png');
+    background-color: white;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-size: 14px 12px;
+    padding-left: 40px;
+}
+
+button {
     cursor: pointer;
-}
-
-.sign_in {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+    height: 40px;
+    background-color: var(--background-color-button-input);
+    border: 1px solid var(--color-button-input);
     border-radius: 5px;
 }
 
-#sign_in_SSO {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #e2d6d6;
-    border-radius: 5px;
+#title_page {
+    margin-left: 20px;
 }
 
-.div_1 {
-    text-align: center;
+#email_password_incorrect {
+    display: none;
+    background-color: var(--background-color-error);
+    color: var(--color-error);
+    align-content: center;
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+#email_duplicate {
+    display: none;
+    background-color: var(--background-color-error);
+    color: var(--color-error);
+    align-content: center;
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+#error_email {
+    display: none;
+    margin: 0;
+    font-size: 12px;
+    color: var(--color-error);
+}
+
+.error_password {
+    display: none;
+    margin: 0;
+    font-size: 12px;
+    color: var(--color-error);
+}
+
+.error_password_again {
+    display: none;
+    margin: 0;
+    font-size: 12px;
+    color: var(--color-error);
+}
+
+.button_check_account {
+    background-color: var(--background-color-check-account);
+    color: white;
+}
+
+#SSO {
+    border-color: var(--border-color-SSO);
+}
+
+.icon-gg {
+    background-image: url('https://admarket.vn/wp-content/uploads/2018/05/lich-su-bieu-trung-google-16.png');
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+}
+
+.icon-mcs {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Microsoft_icon.svg/2048px-Microsoft_icon.svg.png');
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+
+#creative_account {
+    background-color: white;
+    margin: 0 auto;
+    display: block;
+    width: 50%;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid var(--color-button-input);
 }

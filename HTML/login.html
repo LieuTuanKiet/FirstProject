@@ -1,66 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
     <head>
         <meta charset="utf-8">
         <title>Simplify Digital Community Management | Talkbase.io</title>
-        <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" href="..\CSS\login.css">
     </head>
     <body>
-        <div class="login">
-            <h2><img src="https://cdn.prod.website-files.com/654cb95995bd6b25bb76b0dd/654cba2b5549a45807484ecd_631a250422f4281a761b4c27_talkbase.png" class="talkbase-logo">talkbase</h2>
-
-            <p id="error"></p>
-
-            <label for="email">Email address<br></label>
-            <input type="text" id="email" placeholder="your@email.address" required>
-            
-            <label for="password">Password<br></label>
-            <input type="password" id="password" placeholder="Your secret password" onkeydown="isEnter(event)" required>
-            
-            <button id="sign_in_dashboard" onclick="checkLogin()">Login to dashboard</button>
-
-            <button class="sign_in">Sign in with Google</button>
-
-            <button class="sign_in">Sign in with Microsoft</button>
-            
-            <button id="sign_in_SSO">Sign in with SSO</button>
-
-            <div class="div_1">
-                Did you forget your password?
-                <a href="#">Reset it now.</a>
-            
-                <p>Don't have an account yet?</p>
-
-                <button>Create a new one</button>
+        <div class="div_first"></div>
+        <div class="div_second">
+            <div>
+                <img class="logo" src="https://talkbase.io/logos/talkbase/logo_on_light_bg.svg">
+            </div>
+            <form onsubmit="checkAccount(event); console.log('submit')" style="margin: 0px; ">
+                <div>
+                    <p id="email_password_incorrect">Entered email address or password is incorrect.</p>
+                    <p id="email_duplicate">Entered email duplicate.</p>
+                </div>
+                <div>
+                    <label for="email">Email address</label>
+                    <br />
+                    <input id="email" class="input-with-icon-email" type="email" placeholder="your@email.address" required>
+                    <p id="error_email">Invalid email address</p>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <br />
+                    <input id="password" class="input-with-icon-password" type="password" placeholder="Your secret password" required>
+                    <p class="error_password">Password is required</p>
+                </div>
+                <div class="display_c">
+                    <label for="password-again">Password again</label>
+                    <br />
+                    <input id="password-again" class="input-with-icon-password" type="password" placeholder="Enter your secret password again" required>
+                    <p class="error_password_again">Password and password enter again are not same</p>
+                </div>
+                <div>
+                    <button class="button_check_account display_a" onclick="checkAccount(event)">Login to dashboard</button>
+                    <div style="margin: 0px;" class="display_b">
+                        <button class="button_check_account" onclick="addAccount(event)">Create a new account</button>
+                        <button onclick="changeDisplay()" style="margin-top: 20px;">Back to login page</button>
+                    </div>
+                </div>
+            </form>
+            <div class="display_a" style="margin: 0px;">
+                <div>
+                    <button class="icon-gg" onclick="loginGoogle()">Sign in with Google</button>
+                </div>
+                <div>
+                    <button class="icon-mcs" onclick="loginMicrosoft()">Sign in with Microsoft</button>
+                </div>
+                <div>
+                    <button id="SSO" onclick="loginSSO()">Sign in with SSO</button>
+                </div>
+            </div>
+            <div class="display_a" style="text-align: center; margin: 0px;">
+                <div>
+                    <p >Did you forget your password? <a href="#">Reset it now.</a></p>
+                </div>
+                <div>
+                    <p>Don't have an account yet?</p>
+                    <button onclick="changeDisplay()">Create a new one</button>
+                </div>
             </div>
         </div>
+        <div class="div_end"></div>
+        <script src="..\JS\login.js"></script>
     </body>
-    <script>
-        var account = JSON.parse(localStorage.getItem('account')) || {
-            'nguyenvietnghia24092006@gmail.com': 'password123',
-            'account@gmail.com': 'password123'
-        }
-
-        function isEnter(event) {
-            if (event.key === 'Enter') {
-                checkLogin()
-            }
-        }
-
-        function checkLogin() {
-            const email = document.querySelector('#email').value.trim()
-            const password = document.querySelector('#password').value
-
-            const error = document.querySelector('#error')
-
-            if (account[email] === password) {
-                error.innerHTML = ''
-                alert('Đăng nhập thành công!');
-
-            } else {
-                error.style.display = 'block'
-                error.innerHTML = 'Unknown error'
-            }
-        };
-    </script>
 </html>
