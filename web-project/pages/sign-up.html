@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8">
+        <title>Simplify Digital Community Management | Talkbase.io</title>
+        <link rel="stylesheet" href="create-account.css">
+    </head>
+    <body>
+        <div class="space"></div>
+        <div class="middle">
+            <div>
+                <img class="logo" src="https://talkbase.io/logos/talkbase/logo_on_light_bg.svg">
+            </div>
+            <form onsubmit="createAccount(event)" style="margin: 0px; ">
+                <div>
+                    <label for="email">Email address</label>
+                    <br />
+                    <input id="email" class="input-email-icon" type="email" placeholder="your@email.address" required>
+                    <p id="email_invalid" class="error">Invalid email address</p>
+                    <p id="email_exists" class="error">Email already exists</p>
+                </div>
+                <div>
+                    <label for="password1">Password</label>
+                    <br />
+                    <input id="password1" class="input-password-icon" type="password" placeholder="Your secret password" required>
+                </div>
+                <div>
+                    <label for="password2">Password again</label>
+                    <br />
+                    <input id="password2" class="input-password-icon" type="password" placeholder="Enter your secret password again" required>
+                    <p id="password_required" class="error">Password is required</p>
+                    <p id="password_not_same" class="error">Password and password enter again are not same</p>
+                </div>
+                <div>
+                    <div style="margin: 0px;">
+                        <button class="button_blue" onclick="createAccount(event)">Create a new account</button>
+                    </div>
+                </div>
+            </form>
+            <div>
+                <button onclick="goToLogin()" style="margin-top: 20px;">Back to login page</button>
+            </div>
+        </div>
+        <div class="space"></div>
+        <script src="createAccount.js"></script>
+    </body>
+</html>

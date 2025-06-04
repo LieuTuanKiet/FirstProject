@@ -3,46 +3,35 @@
     <head>
         <meta charset="utf-8">
         <title>Simplify Digital Community Management | Talkbase.io</title>
-        <link rel="stylesheet" href="..\CSS\login.css">
+        <link rel="stylesheet" href="login.css">
     </head>
     <body>
-        <div class="div_first"></div>
-        <div class="div_second">
+        <div class="space"></div>
+        <div class="middle">
             <div>
                 <img class="logo" src="https://talkbase.io/logos/talkbase/logo_on_light_bg.svg">
             </div>
-            <form onsubmit="checkAccount(event); console.log('submit')" style="margin: 0px; ">
+            <form onsubmit="loginAccount(event)" style="margin: 0px; ">
                 <div>
-                    <p id="email_password_incorrect">Entered email address or password is incorrect.</p>
-                    <p id="email_duplicate">Entered email duplicate.</p>
+                    <p id="account_invalid">Entered email address or password is incorrect.</p>
                 </div>
                 <div>
                     <label for="email">Email address</label>
                     <br />
-                    <input id="email" class="input-with-icon-email" type="email" placeholder="your@email.address" required>
-                    <p id="error_email">Invalid email address</p>
+                    <input id="email" class="input-email-icon" type="email" placeholder="your@email.address" required>
+                    <p id="email_invalid" class="error">Invalid email address</p>
                 </div>
                 <div>
                     <label for="password">Password</label>
                     <br />
-                    <input id="password" class="input-with-icon-password" type="password" placeholder="Your secret password" required>
-                    <p class="error_password">Password is required</p>
-                </div>
-                <div class="display_c">
-                    <label for="password-again">Password again</label>
-                    <br />
-                    <input id="password-again" class="input-with-icon-password" type="password" placeholder="Enter your secret password again" required>
-                    <p class="error_password_again">Password and password enter again are not same</p>
+                    <input id="password" class="input-password-icon" type="password" placeholder="Your secret password" required>
+                    <p id="password_required" class="error">Password is required</p>
                 </div>
                 <div>
-                    <button class="button_check_account display_a" onclick="checkAccount(event)">Login to dashboard</button>
-                    <div style="margin: 0px;" class="display_b">
-                        <button class="button_check_account" onclick="addAccount(event)">Create a new account</button>
-                        <button onclick="changeDisplay()" style="margin-top: 20px;">Back to login page</button>
-                    </div>
+                    <button class="button_blue" onclick="loginAccount(event)">Login to dashboard</button>
                 </div>
             </form>
-            <div class="display_a" style="margin: 0px;">
+            <div style="margin: 0px;">
                 <div>
                     <button class="icon-gg" onclick="loginGoogle()">Sign in with Google</button>
                 </div>
@@ -53,17 +42,17 @@
                     <button id="SSO" onclick="loginSSO()">Sign in with SSO</button>
                 </div>
             </div>
-            <div class="display_a" style="text-align: center; margin: 0px;">
+            <div style="text-align: center; margin: 0px;">
                 <div>
                     <p >Did you forget your password? <a href="#">Reset it now.</a></p>
                 </div>
                 <div>
                     <p>Don't have an account yet?</p>
-                    <button onclick="changeDisplay()">Create a new one</button>
+                    <button onclick="goToCreateAccount()">Create a new one</button>
                 </div>
             </div>
         </div>
-        <div class="div_end"></div>
-        <script src="..\JS\login.js"></script>
+        <div class="space"></div>
+        <script src="login.js"></script>
     </body>
 </html>
