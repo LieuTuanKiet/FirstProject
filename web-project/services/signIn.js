@@ -42,7 +42,7 @@ function isAccountValid(email, password) {
 }
 
 function goToCreateAccount() {
-    window.location.href = 'https://vietngia249.github.io/create-account/'
+    window.location.href = 'https://vietngia249.github.io/web-pages/web-pages/sign-up-page/'
 }
 
 // phuong thuc xu ly dang nhap
@@ -73,7 +73,23 @@ function loginAccount(event) {
 }
 
 function loginGoogle() {
-    alert("waiting for next update")
+    google.accounts.id.initialize({
+        client_id: '103002721598-arqksrhkguvb5lhlo80rohig6000ao67.apps.googleusercontent.com', // Client ID đã tạo trên Google Cloud
+        callback: (response) => {
+            const data = parseJwt(response.credential);
+
+            // Thêm tài khoản Google vào localStorage nếu chưa có
+            if (!account[data.email]) {
+                account[data.email] = 'google_login'; // Đánh dấu là tài khoản Google
+                localStorage.setItem('account', JSON.stringify(account));
+            }
+
+            alert(`Đăng nhập Google thành công!\nTên: ${data.name}\nEmail: ${data.email}`);
+        },
+    });
+
+    // Gọi popup đăng nhập
+    google.accounts.id.prompt();
 }
 
 function loginMicrosoft() {
@@ -86,4 +102,16 @@ function loginSSO() {
 
 function resetAccount() {
     localStorage.removeItem('account');
+}
+
+// Hàm giải mã ID token (JWT)
+function parseJwt(token) {
+    const base64Url = token.split('.')[1];
+    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    const jsonPayload = decodeURIComponent(
+        atob(base64).split('').map(function(c) {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+        }).join('')
+    );
+    return JSON.parse(jsonPayload);
 }

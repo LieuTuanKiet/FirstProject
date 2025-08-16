@@ -53,7 +53,7 @@ function saveAccount(email, password) {
 }
 
 function goToLogin() {
-    window.location.href = 'https://vietngia249.github.io/login-website/'
+    window.location.href = 'https://vietngia249.github.io/web-pages/web-pages/sign-in-page/'
 }
 
 // phuong thuc xu ly tao tai khoan moi
